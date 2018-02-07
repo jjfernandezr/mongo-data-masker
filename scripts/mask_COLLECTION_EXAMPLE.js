@@ -5,11 +5,11 @@ load('libraries/functions_utils.js');
 var COLLECT_NAME = 'COLLECTION_NAME_A';
 
 //Enumerar los campos a modificar de cada tipo en la colección
-var COLLECT_NAME_STRINGS= ['name', 'surnames', 'bankEntity', 'address', 'email'];
-var COLLECT_NAME_NUMBERS_ST= ['mobileNumber', 'phoneNumber', 'postalCode'];
-var COLLECT_NAME_DECIMAL= ['salary'];
-var COLLECT_NAME_INTEGER= ['budget'];
-var COLLECT_NAME_SPECIALS= ['nif', 'numberAccount'];
+var COLLECT_NAME_STRINGS= ['name', 'surnames', 'bankEntity', 'address', 'email']; //Strings
+var COLLECT_NAME_NUMBERS_ST= ['mobileNumber', 'phoneNumber', 'postalCode']; //Números, pero en formato String
+var COLLECT_NAME_DECIMAL= ['user.bank.salary']; //Decimales, todos los campos aceptan declararse dentro de subdocumentos con la anotación por puntos.
+var COLLECT_NAME_INTEGER= ['budget']; //Enteros
+var COLLECT_NAME_SPECIALS= ['nif', 'numberAccount']; //Caracteres especiales
 
 //Seleccionar la base de datos
 db = db.getSiblingDB(NAME_DB);
