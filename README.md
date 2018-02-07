@@ -63,9 +63,9 @@ load('libraries/functions_utils.js'); //Punto 1
 var COLLECT_NAME = 'COLLECTION_NAME_A'; //Punto 2
 
 //Enumerar los campos a modificar de cada tipo en la colección
-var COLLECT_NAME_STRINGS= ['name', 'surnames', 'bankEntity', 'address', 'email']; //Punto 2.
+var COLLECT_NAME_STRINGS= ['name', 'surnames', 'bankEntity', 'address', 'email']; //Punto 3.
 var COLLECT_NAME_NUMBERS_ST= ['mobileNumber', 'phoneNumber', 'postalCode']; //Son números, pero almacenados como Strings.
-var COLLECT_NAME_DECIMAL= ['user.bank.salary']; //Acepta campos dentro de subdocumentos.
+var COLLECT_NAME_DECIMAL= ['user.bank.salary']; //Decimales, todos los campos aceptan declararse dentro de subdocumentos con la anotación por puntos.
 var COLLECT_NAME_INTEGER= ['budget']; //Enteros
 var COLLECT_NAME_SPECIALS= ['nif', 'numberAccount']; //Caracteres especiales
 
