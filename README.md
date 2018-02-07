@@ -110,6 +110,10 @@ Las funciones de enmascarado que existen en el *function_utils.js* son :
 
 ## Caso particular, el modificar un campo afecta a otro campo duplicado en otra colección:
 
-Durante el análisis de los campos a enmascarar en distintas colecciones, se han detectado duplicidades en los datos o campos que al modificarse en una colección, deberían modificarse por el mismo valor en otra colección diferente. Para esos casos, se ha desarrollado una función dentro de _functions_utils.js_ que se ejecuta cada vez que haya una modificación en un campo y comprobará si este campo tiene relación con otro campo de otra colección, en caso afirmativo, se modificará el campo en ambos documentos con el mismo valor para conservar la consistencia.
+Durante el análisis en proyectos con campos a enmascarar en distintas colecciones, se han detectado duplicidades en los datos o campos que al modificarse en una colección, deberían modificarse por el mismo valor en otra colección diferente.
+
+Este caso se podría solucionar con un buen rediseño de las colecciones y los modelos, pero no en todos los casos se puede permitir el proyecto un cambio de ese nivel.
+
+Para esos casos, se ha desarrollado una función dentro de _functions_utils.js_ que se ejecuta cada vez que haya una modificación en un campo y comprobará si este campo tiene relación con otro campo de otra colección, en caso afirmativo, se modificará el campo en ambos documentos con el mismo valor para conservar la consistencia.
 
 Dentro del fichero _functions_utils.js_, se encuentra este método llamado **searchDBRefs()** , en caso de que se detecte una nueva relación, habría que indicarse dentro de esa función el caso concreto que cumple esa relación detectada y qué hacer en ese caso.
